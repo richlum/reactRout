@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ContactPage from './ContactPage';
 import EmployPage from './EmployPage';
-import {Route} from 'react-router-dom';
+import {Route, Link} from 'react-router-dom';
 // import store from './mystore';
 // import {Provider} from 'react-redux';
 // import store from './mystore'
@@ -21,12 +21,12 @@ class App extends Component {
         <h1 className="App-title">Welcome to React</h1>
       </header>
   		<div>
-  			<button>one</button>
-  			<button>two</button>
-  			<button>three</button>
+  			<Link to="/employ"> <button>Employer</button> </Link>
+  			<Link to="/contact"> <button>Contact</button></Link>
+  			<Link to="/"> <button>three</button></Link>
   		</div>
   		<Route path="/employ" component={EmployPage} />
-      <Route path="/" component={ContactPage} />
+      <Route path="/contact" component={ContactPage} />
     </div>
 	// </Provider>
     );
