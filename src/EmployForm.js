@@ -6,7 +6,7 @@ let EmployForm = props => {
 	const { handleSubmit } = props
 	console.log('EmployForm, props:' , JSON.stringify(props));
 	let input = "input"
-	return <form onSubmit={handleSubmit}> 
+	return <form onSubmit={handleSubmit}>
 		<div>
 			<label htmlFor="employerName">Employer Name</label>
 			<Field name="employerName" component={input} type="text" />
@@ -28,8 +28,7 @@ let EmployForm = props => {
 }
 
 EmployForm = reduxForm({
-	form: 'contact'
+	form: 'employ'
 })(EmployForm)
 
 export default EmployForm
-
